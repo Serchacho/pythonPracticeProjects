@@ -21,5 +21,8 @@ print("Hi! This program is going to help you figure out how many years it will t
 name = input("First, can I have your name?: ")
 age = int(input("\nNow, can I have your age?: "))
 
-print("\nThanks, " + name + ". Your age is " + str(age) + " and you will turn 100 years old in " + str(100-age) + " years.")
+currentYear = int(2024)
+yearAge100 = currentYear - age + 100
+
+print("\nThanks, " + name + ". Your age is " + str(age) + " and you will turn 100 years old in the year " + str(yearAge100) + ".")
 print()
