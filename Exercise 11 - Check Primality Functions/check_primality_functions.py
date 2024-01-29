@@ -27,3 +27,4 @@ if(check_prime(number)):
     print("Your number is a prime number")
 else:
     print("Your number is NOT a prime number")
+    
