@@ -23,7 +23,10 @@ a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
 b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 c = {1,3,8,12,13}                                   # initializing a set
 
+custom = {y for x in a for y in b if x == y}		# makes custom list of all numbers that are common in both lists, but may have duplicates
+
 list1 = set(a)                                      # a set will grab all the different numbers and remove the duplicates
 list2 = set(b)
 
 print(list1 & c)
+print(custom)
