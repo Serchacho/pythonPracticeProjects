@@ -14,9 +14,9 @@ Ask the user how strong they want their password to be. For weak passwords, pick
 import string                                           # imports ascii
 import random
 
-numbers = [x for x in range(1,10)]                      # creates list with numbers from 1-9
-lowerLet = [chr(let) for let in range(97,123)]          # all lower case letters
-upperLet = [chr(let) for let in range(65,90)]           # all upper case letters
+numbers = [i for i in range(1,10)]                      # creates list with numbers from 1-9
+lowerLet = [chr(i) for i in range(97,123)]          # all lower case letters
+upperLet = [chr(i) for i in range(65,90)]           # all upper case letters
 symbols = [chr(i) for i in range(33,48)]                # chr(i) returns character in ASCII at integer i; 33-47 for symbols
 
 # convert all lists into sets
@@ -39,26 +39,24 @@ available = []
 
 for num in include:
     if int(num) == 1:
-        print("Number is 1")
         available.extend(numbers)
     if int(num) == 2:
-        print("Number is 2")
         available.extend(lowerLet)
     if int(num) == 3:
-        print("Number is 3")
-        available.extend(lowerLet)
+        available.extend(upperLet)
     if int(num) == 4:
-        print("Number is 4")
-        available.extend(lowerLet)
+        available.extend(symbols)
 
-print("Characters available: " + str(available))
+
 
 # creating password
 length = int(input("How long do you want the password?: "))     # determines length of password
 password = ''
 
-characters = [available[random.randint(0,len(available))] for x in range(0, length)]        # grabs random element inside of available[] for the length user requested
+characters = [available[random.randint(0,len(available))] for i in range(0, length)]        # grabs random element inside of available[] for the length user requested
 
 for char in characters:
     password += str(char)
-print(password)
+
+# display
+print("Here is your new password!: " + password)
