@@ -12,6 +12,7 @@ Ask the user how strong they want their password to be. For weak passwords, pick
 """
 
 import string                                           # imports ascii
+import random
 
 numbers = [x for x in range(1,10)]                      # creates list with numbers from 1-9
 lowerLet = [chr(let) for let in range(97,123)]          # all lower case letters
@@ -50,5 +51,14 @@ for num in include:
         print("Number is 4")
         available.extend(lowerLet)
 
-print(available)
+print("Characters available: " + str(available))
 
+# creating password
+length = int(input("How long do you want the password?: "))     # determines length of password
+password = ''
+
+characters = [available[random.randint(0,len(available))] for x in range(0, length)]        # grabs random element inside of available[] for the length user requested
+
+for char in characters:
+    password += str(char)
+print(password)
