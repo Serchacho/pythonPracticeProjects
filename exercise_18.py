@@ -14,22 +14,40 @@ from random import randint
 
 def main():
     
+    # from here on out, continue asking until 
     number = random_num()
 
+    # from here on out continue asking
+    guess = get_num()
+
+    cows = find_cows(guess, number)
+
+    #if compare() == true:
 
     
 
 
 def random_num():               # creates random 4 digit number
-    number = str()
+    number = []
 
     for x in range(4):
-        number += str(randint(0,10))
+        number.append(randint(0,10))
 
     return number
 
-def compare(guess, number):
-    print()
+def get_num():
+    guess = str(input("Enter your guess: "))
+
+    return guess
+
+def find_cows(guess, number):
+    cows = 0
+    for i in range(0, 4):
+        if number[i] == guess[i]:
+            cows += 1
+    
+    return cows
+        
 
 
 if __name__ == '__main__':          # if 
