@@ -14,15 +14,19 @@ from random import randint
 
 def main():
     
+    playing = True
+
     # from here on out, continue asking until 
     number = random_num()
 
     # from here on out continue asking
-    guess = get_num()
+    while playing:
+        guess = get_num()
 
-    cows = find_cows(guess, number)
+        cows = find_cows(guess, number)
+        #bulls = find_bulls
 
-    #if compare() == true:
+        #if compare() == true:
 
     
 
