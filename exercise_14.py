@@ -23,7 +23,7 @@ def remove_duplicates(arr1, arr2):                      # function to remove dup
 
     for x in custom:                                    # traverses through both arrays
         for y in custom:
-            if x==y:                                    # if similar numbers, makes sure it only gets added once
+            if x == y:                                    # if similar numbers, makes sure it only gets added once
                 instances += 1
                 if instances > 1:
                     custom.pop(custom.index(y))         # removes the second instance of a number in custom array
