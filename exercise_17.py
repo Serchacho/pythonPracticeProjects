@@ -17,6 +17,15 @@ r_html = r.text
 
 soup = BeautifulSoup(r_html, features="html.parser")
 
-for link in soup.find_all('p'):
-    #print("Name: ")
-    print("Name: " + link.string)
+for link in soup.find_all(class_='indicate-hover css-66vf3i'):
+    print(link.text)
+
+    """
+    # this is the solution from the Exercise Website
+    if link.a: 
+        print(link.a.text.replace("\n", " ").strip())
+    else: 
+        print(link.contents[0].strip())
+    """
+
+print("\n\nDONE")
