@@ -65,7 +65,6 @@ def random_num():               # creates random 4 digit number
     return number
 
 
-
 def get_num():
     guess = str(input("Enter your guess: "))
     guess = list(guess)
@@ -75,7 +74,6 @@ def get_num():
     return guess
 
 
-
 def find_cows(guess, number):
     cows = 0
     for i in range(0, 4):
@@ -83,7 +81,6 @@ def find_cows(guess, number):
             cows += 1
     
     return cows
-
 
 
 def find_bulls(guess, number):
