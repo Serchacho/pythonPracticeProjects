@@ -4,11 +4,10 @@ Input:  1. terms
         
 """
 
-num_terms = 0
-factor = 0
-
 
 def main():
+    num_terms = 0
+    factor = 0
     num_terms = int(input("How many terms are there?: "))
     terms = []
 
@@ -36,7 +35,7 @@ def main():
         if(result == 0):
             factor = r
 
-    print("a factor of the equation is (r +", -factor)    
+    print("a factor of the equation is (r +", -1 * factor, ")")    
 
 
 
